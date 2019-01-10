@@ -1,0 +1,12 @@
+[user]
+	name = ErikJamesThompson
+	email = erik.james.thompson@gmail.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[rebase]
+	autosquash = true
+[alias]
+	hist = log --pretty=format:\"%C(Yellow)%h - %C(green)<%an>, %ar : %C(white)%s%C(red)%d\" -10 --graph
